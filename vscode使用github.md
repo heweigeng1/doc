@@ -12,4 +12,10 @@
 ![github](http://images2015.cnblogs.com/blog/775345/201707/775345-20170703230421878-30958653.png)
 9. 添加完钥匙为绿色就是生效。
 
+10. vs code 源代码管理器里包含了git的命令。剩下的可以慢慢摸索了。
 
+11. 推荐vs code插件 
+    * Open in GitHub，可以让你右键跳转到github地址上.
+
+> 最后希望你能在这篇文章学到东西。   
+> [更多学习内容](https://github.com/heweigeng1/doc)
