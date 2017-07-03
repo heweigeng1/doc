@@ -1,5 +1,5 @@
-# [Markdown——入门](#Markdown——入门 "test")
-
+# [Markdown——入门](#index "test")
+# index2
 ## 优点
 1. 可以导出html,pdf与md文件
 2. 学习成本低
@@ -49,8 +49,8 @@
 
 @锚点
 
-跳转到[标题](#Markdown——入门)
+跳转到[标题](#index)
 
-跳转到<a href="## 优点">优点</a>
+跳转到[标题](#index2)
 
 
