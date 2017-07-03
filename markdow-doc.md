@@ -47,10 +47,10 @@
 
 ![img](https://cn.vuejs.org/images/logo.png)
 
-@描点
+@锚点
 
-跳转到[引用](Markdown——入门)
+跳转到<a href="#Markdown——入门">Markdown——入门</a>
 
-跳转到[引用2](##优点)
+跳转到<a href="## 优点">优点</a>
 
 
