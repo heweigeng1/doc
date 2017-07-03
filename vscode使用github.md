@@ -1,6 +1,6 @@
 # 用vscode连接github
 
-1. 如果你本机已经又git客户端，或者已经使用了Visual Studio的github插件，就已经安装了git。
+1. 如果你本机已经有git客户端，或者已经使用了Visual Studio的github插件。
 2. 注册你的github账号
 3. 打开git bach
 4. 再命令窗口输入 $ ssh-keygen -t rsa -C “xxx@163.com” 把邮箱地址替换为你的github注册邮箱。
