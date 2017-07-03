@@ -1,4 +1,4 @@
-# [Markdown——入门](#Markdown——入门)
+# [Markdown——入门](#Markdown——入门 "test")
 
 ## 优点
 1. 可以导出html,pdf与md文件
@@ -49,7 +49,7 @@
 
 @锚点
 
-跳转到<a href="#Markdown——入门">Markdown——入门</a>
+跳转到[标题](#Markdown——入门)
 
 跳转到<a href="## 优点">优点</a>
 
