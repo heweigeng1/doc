@@ -1,4 +1,20 @@
-[TOC]
+<!-- TOC -->
+
+- [优点](#)
+- [语法规则](#)
+    - [标题](#)
+    - [列表](#)
+    - [引用](#)
+    - [连接与图片](#)
+    - [锚点](#)
+    - [缩进](#)
+    - [转义符\](#)
+    - [表格](#)
+    - [华丽的分割](#)
+    - [代码块](#)
+    - [使用html](#html)
+
+<!-- /TOC -->
 
 ## 优点
 1. 可以导出html,pdf与md文件
@@ -75,6 +91,8 @@
 
 ### 代码块
 
+* 默认代码块
+
 ```
 #include <stdio.h>
 int main(void)
@@ -82,3 +100,36 @@ int main(void)
     printf("Hello world\n");
 }
 ```
+
+* 指定代码块语法  
+``` javascript 
+var a = "才子一生平安" 
+function test（）{
+    console.log("ok");
+}
+```
+
+### 使用html
+* 例1
+
+<div class="footer">
+   © 2004 Foo Corporation
+</div>
+
+* 例2
+<table>
+    <tr>
+        <th rowspan="2">日期</th>
+        <th>星期一</th>
+        <th>星期二</th>
+        <th>星期三</th>
+    </tr>
+    <tr>
+        <td>曼玉</td>
+        <td>楚红</td>
+        <td>青霞</td>
+    </tr>
+</table>
+
+
+
