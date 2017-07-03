@@ -1,7 +1,7 @@
-# Markdown——入门
+# Markdown——入门 {#index}
 
 
-## 优点
+## 优点 {#list1}
 1. 可以导出html,pdf与md文件
 2. 学习成本低
 3. 专注内容.降低考虑样式
@@ -34,7 +34,7 @@
 
 @连接与图片
 
-[www.baidu.com](www.baidu.com)
+[www.baidu.com](http://www.baidu.com)
 
 <http://www.baidu.com>
 
@@ -50,7 +50,7 @@
 
 @描点
 
-跳转到[引用](#Markdown——入门)
+跳转到[引用](#index)
 
 
 
