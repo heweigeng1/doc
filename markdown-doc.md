@@ -195,10 +195,12 @@ function test（）{
 </table>
 
 ### 目录
-1. 安装TOC插件
-1. VScode里可以搜索 Markdown TOC
+1. 安装 Markdown TOC 插件
+    * 会根据标题生成目录.   
     * 右键菜单会多出几个选项，可以逐一测试效果
     * 生产时跳转锚点会有问题
     * 可以手动把生成的代码调整一下,让自动生成的代码不重新生成
     * 具体效果可以参考[目录](#目录)
 
+* 推荐去我的[github](https://github.com/heweigeng1/doc/blob/master/markdown-doc.md)下载看源代码更直观.
+* 希望这篇博客能帮到你.
