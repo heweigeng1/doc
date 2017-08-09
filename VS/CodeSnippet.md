@@ -3,7 +3,7 @@
 1. 一个XML编辑器,虽然XML可以用文本编辑器打开,但是好的编辑器写起来还是得心应手.我个人使用的是vscode
 1. 阅读官方的demo    
     1. 下面以VS2017为例子,在菜单栏=>工具=>代码片段管理器,或者快捷键**ctrl k,b** .打开管理界面.如下图     
-    ![图片](https://github.com/heweigeng1/doc/tree/master/VS/img/代码片段管理窗口.png)         
+    ![图片](https://github.com//heweigeng1/doc/blob/master/VS/img/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5%E7%AE%A1%E7%90%86%E7%AA%97%E5%8F%A3.png?raw=true")         
     2. 用编辑器打开目录下的**testclass.snippet**,花半小时阅读几个关键字,观察VS里的实际效果.就可以开始编辑自己的自定义代码段了.
 ## 一些重要的关键字
 ### 1.Header   
