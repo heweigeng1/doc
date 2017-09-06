@@ -6,7 +6,7 @@
 
 ![环境变量1](../img/hjbl1.png)
 
-![环境变量2](.../img/hjbl2.png)
+![环境变量2](../img/hjbl2.png)
 
 本人使用VSCode编辑器学习Python,所以直接在插件查找Python安装即可.
 ## Hello World
