@@ -2,25 +2,33 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import logo from './logo.svg';
+import ChildCom from './ChildCom';
+
 
 class Tom extends React.Component {
+    constructor(props) {
+        super(props)
+        console.log(props.date);
+        this.state = {
+            date: new Date()
+        }
+    }
+    componentDidMount() {
+        setInterval(() => {
+            this.setState({ date: new Date() })
+        }, 1000)
+    }
+    onfather=(str)=>{
+        console.log(str)
+    }
     render() {
-        return
-        (
-            <p>{this.props.date.toLocaleTimeString()}</p>
-            <Component-State />
+        return (
+            <div>
+                <ChildCom onfather={this.onfather} user={{name:'tom',age:20}} />
+                <p>{this.state.date.toLocaleTimeString()}</p >
+            </div>
+
         )
     }
-    onclick = () => {
-        console.log(this)
-    }
 }
-
-function tick() {
-    ReactDOM.render(
-        <Tom date={new Date()} />,//这里是属性
-        document.getElementById('tomdom')
-    );
-}
-setInterval(tick, 1000)
 export default Tom;
