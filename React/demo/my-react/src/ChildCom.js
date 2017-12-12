@@ -11,10 +11,12 @@ export default class ChilCom extends Component {
             this.props.onfather('father')
         }else{
             console.log('child')
+            console.log(this)
         }
     }
     render() {
-        const { user } = this.props
+        //因为父控件,每秒刷新,所以子控件也会每秒被执行.
+        const { user,onfather } = this.props
         return (
             <div onClick={this.onclickchild}>子控件
                 <label htmlFor="">{user.name}</label>

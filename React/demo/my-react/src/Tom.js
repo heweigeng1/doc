@@ -10,7 +10,12 @@ class Tom extends React.Component {
         super(props)
         console.log(props.date);
         this.state = {
-            date: new Date()
+            date: new Date(),
+            user:{
+                name:'tom',
+                age:60,
+            },
+            adress:"我在北京"
         }
     }
     componentDidMount() {
@@ -20,11 +25,19 @@ class Tom extends React.Component {
     }
     onfather=(str)=>{
         console.log(str)
+        
+        this.setState({
+           user:{
+               name:'lili',
+               age:20,
+           }
+        })
+        console.log(this.state)
     }
     render() {
         return (
             <div>
-                <ChildCom onfather={this.onfather} user={{name:'tom',age:20}} />
+                <ChildCom onfather={this.onfather} user={this.state.user} />
                 <p>{this.state.date.toLocaleTimeString()}</p >
             </div>
 
