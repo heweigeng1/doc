@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        div>li>a {
+            width: 10px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div>
+        <li>
+            <a class="old-a">val1</a>
+        </li>
+        <li>
+            <a class="old-b">val2</a>
+        </li>
+        <li>
+            <a class="old-c">val3</a>
+        </li>
+        <li>
+            <a class="old-d">val4</a>
+        </li>
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+       var test= $("div>li>a").on("click",function(){
+           var cs=$(this).attr("class")
+           console.log(cs)
+       });
+    })
+</script>
+
+</html>
