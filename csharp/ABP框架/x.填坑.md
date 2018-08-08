@@ -7,6 +7,7 @@
 - [1. 解坑](#1-解坑)
     - [1.1. 目录](#11-目录)
     - [1.2. 结果拦截器](#12-结果拦截器)
+    - [1.3. 注册模块里的通用仓储](#13-注册模块里的通用仓储)
 
 <!-- /TOC -->
 
@@ -28,26 +29,56 @@ public void Test2()
 }
 ```
 
-```qq
-只要 abp module能够启动，一切都可以
-宁波-冂人山(2444969246) 2018/6/12 11:17:36
-应该可以，要自己分离源码吧
-诸葛小亮(1260825783) 2018/6/12 11:19:05
-不用
-诸葛小亮(1260825783) 2018/6/12 11:19:14
-nuget  引入即可
-诸葛小亮(1260825783) 2018/6/12 11:19:42
-启动abp的类是 AbpBootstrappr.Create<T>  这个
-诸葛小亮(1260825783) 2018/6/12 11:20:13
-在 program中调用这个方法，在 执行对象的  init...  方法即可
-宁波-冂人山(2444969246) 2018/6/12 11:20:23
-启动类引入
-宁波-冂人山(2444969246) 2018/6/12 11:20:41
-别的模块也有引入
-诸葛小亮(1260825783) 2018/6/12 11:22:54
+## 1.3. 注册模块里的通用仓储
 
-诸葛小亮(1260825783) 2018/6/12 11:23:06
-关键的几句话，其他的模块，使用方式和  web一样
-诸葛小亮(1260825783) 2018/6/12 11:23:10
-添加 module依赖即可
+查看modules 里的RegisterGenericRepositoriesAndMatchDbContexes 函数
+
+```c#
+/// <summary>
+/// 注册通用仓储IRepository<>
+/// </summary>
+private void RegisterGenericRepositoriesAndMatchDbContexes()
+{
+    var dbContextTypes =
+        _typeFinder.Find(type =>
+        {
+            var typeInfo = type.GetTypeInfo();
+            return typeInfo.IsPublic &&
+                   !typeInfo.IsAbstract &&
+                   typeInfo.IsClass &&
+                   typeof(AbpDbContext).IsAssignableFrom(type);
+        });
+    if (dbContextTypes.IsNullOrEmpty())
+    {
+        Logger.Warn("No class found derived from AbpDbContext.");
+        return;
+    }
+    using (IScopedIocResolver scope = IocManager.CreateScope())
+    {
+        foreach (var dbContextType in dbContextTypes)
+        {
+            Logger.Debug("Registering DbContext: " + dbContextType.AssemblyQualifiedName);
+            var re = scope.Resolve<ITestEfGenericRepositoryRegistrar>();//搭完后移除
+            re.RegisterForDbContext(dbContextType, IocManager, EfCoreAutoRepositoryTypes.Default);
+            IocManager.IocContainer.Register(
+                Component.For<ISecondaryOrmRegistrar>()
+                    .Named(Guid.NewGuid().ToString("N"))
+                    .Instance(new EfCoreBasedSecondaryOrmRegistrar(dbContextType, scope.Resolve<IDbContextEntityFinder>()))
+                    .LifestyleTransient()
+            );
+        }
+        scope.Resolve<IDbContextTypeMatcher>().Populate(dbContextTypes);
+    }
+}
+```
+
+然后在Modules 的Initialize函数里使用这个函数
+
+```c#
+public override void Initialize()
+{
+    var ass = typeof(LegoAbpEntityFrameworkCoreModule).GetAssembly();
+    IocManager.RegisterAssemblyByConvention(ass);
+    RegisterGenericRepositoriesAndMatchDbContexes();
+}
 ```
