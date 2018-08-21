@@ -81,6 +81,7 @@
 
 ![img](https://cn.vuejs.org/images/logo.png)
 ```
+
 [www.baidu.com](http://www.baidu.com)  
 <http://www.baidu.com>
 
@@ -96,7 +97,6 @@
 跳转到[目录](#目录)  
 跳转到[优点](#优点)  
 跳转到[语法规则](#语法规则)
-
 
 ### 1.2.6. 缩进
 
