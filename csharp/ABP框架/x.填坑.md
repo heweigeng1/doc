@@ -8,6 +8,7 @@
     - [1.1. 目录](#11-目录)
     - [1.2. 结果拦截器](#12-结果拦截器)
     - [1.3. 注册模块里的通用仓储](#13-注册模块里的通用仓储)
+    - [1.4. 全局修改DateTimeFromat](#14-全局修改datetimefromat)
 
 <!-- /TOC -->
 
@@ -81,4 +82,12 @@ public override void Initialize()
     IocManager.RegisterAssemblyByConvention(ass);
     RegisterGenericRepositoriesAndMatchDbContexes();
 }
+```
+
+## 1.4. 全局修改DateTimeFromat
+
+在Module里加上这个配置
+
+```c#
+ Configuration.Modules.AbpAspNetCore().UseMvcDateTimeFormatForAppServices = true;
 ```
