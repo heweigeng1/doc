@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>abp Paging</Title>
+			<Shortcut>abppage</Shortcut>
+			<Description>abp module init</Description>
+			<Author>tom Corporation</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+            <Imports>
+                <Import>
+                    <Namespace>System.Linq</Namespace>
+                </Import>
+            </Imports>
+			<Code Language="csharp"><![CDATA[
+            //过滤查询条件
+            input.Filtered(query);
+            var totalCount = query.Count();
+            //排序,分页
+            query.ToPaged(input.Pagination.Sorter, input.Pagination.SortDirection, input.Pagination.Current, input.Pagination.PageSize);
+            var entities = AutoMapper.Mapper.Map<List<Name$end$>>(query);
+            return new AntdPagedResultDto<Name>(
+               entities,
+               input.Pagination.Current,
+               input.Pagination.PageSize,
+               totalCount
+            );]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
