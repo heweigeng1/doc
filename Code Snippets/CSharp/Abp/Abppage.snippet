@@ -17,15 +17,18 @@
                     <Namespace>System.Linq</Namespace>
                 </Import>
             </Imports>
-			<Code Language="csharp"><![CDATA[
-            //过滤查询条件
-            input.Filtered(query);
-            var totalCount = query.Count();
+			<Code Language="csharp"><![CDATA[//过滤查询条件
+            query = input.Filtered(query);
+            // 如果要用注入的方式,先添加属性
+            // public IAsyncQueryableExecuter AsyncQueryableExecuter { get; set; }
+            // 再在构造函数 AsyncQueryableExecuter=NullAsyncQueryableExecuter.Instance;
+            // await AsyncQueryableExecuter.CountAsync(query);
+            var totalCount = await NullAsyncQueryableExecuter.Instance.CountAsync(query);
             //排序,分页
-            query.ToPaged(input.Pagination.Sorter, input.Pagination.SortDirection, input.Pagination.Current, input.Pagination.PageSize);
-            var entities = AutoMapper.Mapper.Map<List<Name$end$>>(query);
-            return new AntdPagedResultDto<Name>(
-               entities,
+            query = query.ToPaged(input.Pagination);
+            var outputs = AutoMapper.Mapper.Map<List<entityName$end$>>(query);
+            return new AntdPagedResultDto<entityName>(
+               outputs,
                input.Pagination.Current,
                input.Pagination.PageSize,
                totalCount
