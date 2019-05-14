@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>abp thrwo err</Title>
+			<Shortcut>loghelp</Shortcut>
+			<Description>abp err </Description>
+			<Author>tom Corporation</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+            <Imports>
+                <Import>
+                	<Namespace>Abp.Logging</Namespace>
+                </Import>
+            </Imports>
+			<Code Language="csharp"><![CDATA[LogHelper.Logger.Info($end$);]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
