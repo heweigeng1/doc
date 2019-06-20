@@ -46,3 +46,73 @@
 		</DATASET_LINE>
 	</DATASET>
 </XSM>
+<xml>
+	<amount><![CDATA[100]]></amount>
+	<check_name><![CDATA[NO_CHECK]]></check_name>
+	<desc><![CDATA[提现]]></desc>
+	<mch_appid><![CDATA[wxac221cf8e9e01bb0]]></mch_appid>
+	<mch_id><![CDATA[1303422501]]></mch_id>
+	<nonce_str><![CDATA[GHWIW31IQZF5DQAM]]></nonce_str>
+	<openid><![CDATA[oHED74vZ6yhDxoEQdRx8GW6U3VTk]]></openid>
+	<partner_trade_no><![CDATA[CO19061817504050000432]]></partner_trade_no>
+	<spbill_create_ip><![CDATA[127.0.0.1]]></spbill_create_ip>
+	<sign><![CDATA[6736C1F860263E5A191457005540C993]]></sign>
+</xml>
+
+<xml>
+	<return_code><![CDATA[SUCCESS]]></return_code>
+	<return_msg><![CDATA[参数错误：必须填入商户号]]></return_msg>
+	<result_code><![CDATA[FAIL]]></result_code>
+	<err_code><![CDATA[PARAM_ERROR]]></err_code>
+	<err_code_des><![CDATA[参数错误：必须填入商户号]]></err_code_des>
+</xml>
+
+<xml>
+	<amount><![CDATA[100]]></amount>
+	<appid><![CDATA[wxac221cf8e9e01bb0]]></appid>
+	<check_name><![CDATA[NO_CHECK]]></check_name>
+	<desc><![CDATA[提现]]></desc>
+	<mch_id><![CDATA[1303422501]]></mch_id>
+	<nonce_str><![CDATA[SF0NOT9ZTF048W21]]></nonce_str>
+	<openid><![CDATA[oHED74vZ6yhDxoEQdRx8GW6U3VTk]]></openid>
+	<partner_trade_no><![CDATA[CO19061817504050000432]]></partner_trade_no>
+	<spbill_create_ip><![CDATA[127.0.0.1]]></spbill_create_ip>
+	<sign><![CDATA[06EC664F1AD8519D1B81B69B339918D7]]></sign>
+</xml>
+
+<xml>
+	<appid><![CDATA[wxac221cf8e9e01bb0]]></appid>
+	<mch_id><![CDATA[1303422501]]></mch_id>
+	<nonce_str><![CDATA[R2PAGTO1S8C93X0Z]]></nonce_str>
+	<out_refund_no><![CDATA[E20190619142640799400079]]></out_refund_no>
+	<out_trade_no><![CDATA[E20190619142603489600056]]></out_trade_no>
+	<refund_fee><![CDATA[1]]></refund_fee>
+	<total_fee><![CDATA[1]]></total_fee>
+	<sign><![CDATA[EA6A759FF65AB84A706AC4762476135D]]></sign>
+</xml>
+
+<xml>
+	<amount><![CDATA[100]]></amount>
+	<check_name><![CDATA[NO_CHECK]]></check_name>
+	<desc><![CDATA[提现]]></desc>
+	<mch_appid><![CDATA[wxac221cf8e9e01bb0]]></mch_appid>
+	<mch_id><![CDATA[1303422501]]></mch_id>
+	<nonce_str><![CDATA[3C3RIJI6ULV6287I]]></nonce_str>
+	<openid><![CDATA[oHED74iT41WWMMdRDVkjiIkaXMkg]]></openid>
+	<partner_trade_no><![CDATA[CO19061914412574200402]]></partner_trade_no>
+	<spbill_create_ip><![CDATA[127.0.0.1]]></spbill_create_ip>
+	<sign><![CDATA[22345D22C8BACB0D2E10318AD4A64C38]]></sign>
+</xml>
+
+<xml>
+	<amount><![CDATA[100]]></amount>
+	<check_name><![CDATA[NO_CHECK]]></check_name>
+	<desc><![CDATA[提现]]></desc>
+	<mch_appid><![CDATA[wxbdd02cd557827b15]]></mch_appid>
+	<mchid><![CDATA[1303422501]]></mchid>
+	<nonce_str><![CDATA[81RT771DP0WGC4BB]]></nonce_str>
+	<openid><![CDATA[oHED74p2F3Wlytc9e2cTyab7bzuE]]></openid>
+	<partner_trade_no><![CDATA[CO19062010202439300635]]></partner_trade_no>
+	<spbill_create_ip><![CDATA[127.0.0.1]]></spbill_create_ip>
+	<sign><![CDATA[D9C38218F0414C3240A29FF48FB50AE4]]></sign>
+</xml>
