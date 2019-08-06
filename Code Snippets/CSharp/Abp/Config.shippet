@@ -2,7 +2,7 @@
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
 	<CodeSnippet Format="1.0.0">
 		<Header>
-			<Title>abp thrwo err</Title>
+			<Title>abp load appseeting.json</Title>
 			<Shortcut>abpconfig</Shortcut>
 			<Description>abp load json </Description>
 			<Author>tom Corporation</Author>
@@ -14,11 +14,10 @@
 		<Snippet>
             <Imports>
                 <Import>
-                  <Namespace>System.Reflection</Namespace>
-                <Namespace>Abp.Modules</Namespace>
+                  <Namespace>Microsoft.Extensions.Configuration</Namespace>
                 </Import>
             </Imports>
-			<Code Language="csharp"><![CDATA[Microsoft.Extensions.Configuration;
+			<Code Language="csharp"><![CDATA[private readonly IConfigurationRoot _appConfiguration;
 			 IHostingEnvironment env
 			 _appConfiguration = env.GetAppConfiguration();
 			]]>
