@@ -1,5 +1,7 @@
 # nginx小记
 
+* [安装nginx](https://www.cnblogs.com/zhanghaoyong/p/7737536.html)
+
 * linux查找nginx是以哪个config启动的
 
 ```shell
