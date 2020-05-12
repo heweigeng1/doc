@@ -1,0 +1,35 @@
+version: '1'
+services:
+  drone:
+    image: drone/drone:1
+    container_name: drone
+    volumes:
+      - "/data/drone:/data"
+    environment:
+      - DRONE_AGENTS_ENABLED=true
+      - DRONE_GITEA_SERVER=https://gitea.dns2.shundaonetwork.com
+      - DRONE_GITEA_CLIENT_ID=7cf2de30-7d6d-4891-8c14-9afb821fc66f
+      - DRONE_GITEA_CLIENT_SECRET=XkkmsA3XqfodZe3hg2VbipiWiZ-UrVvN-FQhjexvQWs=
+      - DRONE_RPC_SECRET=myakjad2421231
+      - DRONE_SERVER_HOST=drone.shundaonetwork.com
+      - DRONE_SERVER_PROTO=http
+      - DRONE_GIT_ALWAYS_AUTH=true
+      - DRONE_USER_CREATE=username:laomao,machine:false,admin:true,token:31e956887e952d563b35aa3f0642427414d85d1a
+    restart: always
+    ports:
+      - "10090:80"
+
+  drone-docker-runner:
+    image: drone/drone-runner-docker:1
+    container_name: drone-docker-runner
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    environment:
+      - DRONE_RPC_PROTO=http
+      - DRONE_RPC_HOST=drone.shundaonetwork.com
+      - DRONE_RPC_SECRET=myakjad2421231
+      - DRONE_RUNNER_CAPACITY=2
+      - DRONE_RUNNER_NAME=drone-runner
+    restart: always
+    depends_on:
+      - drone
