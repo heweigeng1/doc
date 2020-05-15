@@ -7,13 +7,13 @@ services:
       - "/data/drone:/data"
     environment:
       - DRONE_AGENTS_ENABLED=true
-      - DRONE_GITEA_SERVER=https://gitea.dns2.shundaonetwork.com
-      - DRONE_GITEA_CLIENT_ID=7cf2de30-7d6d-4891-8c14-9afb821fc66f
+      - DRONE_GITEA_SERVER=https://gitea.abc.com #外网可访问的git 地址
+      - DRONE_GITEA_CLIENT_ID=7cf2de30-7d6d-4891-8c14-9afb821fc66f # gitea 后台新建应用获取
       - DRONE_GITEA_CLIENT_SECRET=XkkmsA3XqfodZe3hg2VbipiWiZ-UrVvN-FQhjexvQWs=
-      - DRONE_RPC_SECRET=myakjad2421231
-      - DRONE_SERVER_HOST=drone.shundaonetwork.com
+      - DRONE_RPC_SECRET=myakjad2421231 # 与running 交互的密钥
+      - DRONE_SERVER_HOST=drone.abc.com #外网可访问的drone 地址
       - DRONE_SERVER_PROTO=http
-      - DRONE_GIT_ALWAYS_AUTH=true
+      - DRONE_GIT_ALWAYS_AUTH=true #设置这个免登陆
       - DRONE_USER_CREATE=username:laomao,machine:false,admin:true,token:31e956887e952d563b35aa3f0642427414d85d1a
     restart: always
     ports:
@@ -26,7 +26,7 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock"
     environment:
       - DRONE_RPC_PROTO=http
-      - DRONE_RPC_HOST=drone.shundaonetwork.com
+      - DRONE_RPC_HOST=drone.abc.com # 外网可访问的地址
       - DRONE_RPC_SECRET=myakjad2421231
       - DRONE_RUNNER_CAPACITY=2
       - DRONE_RUNNER_NAME=drone-runner
