@@ -1,5 +1,17 @@
 version: '3.7'
 services:
+  nginx:
+    image: nginx
+    container_name: nginx
+    ports: 
+      - 80:80
+      - 443:443
+    networks:
+      - internal-network
+    volumes: 
+      - /root/Volumes/Nginx/nginx.conf:/etc/nginx/nginx.conf
+      - /root/Volumes/Nginx/Configs:/etc/nginx/conf.d
+    restart: always
   elk:
     image: sebp/elk:740
     container_name: elk
