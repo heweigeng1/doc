@@ -13,8 +13,6 @@ services:
     volumes:
       - /opt/elk-data:/var/lib/elasticsearch
       - /etc/localtime:/etc/localtime
-    depends_on: 
-      - nginx
     ulimits: 
       nproc: 262144
       nofile:
