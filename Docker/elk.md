@@ -13,9 +13,10 @@ docker run -tid -p 5601:5601 -p 5044:5044 -p 9200:9200 -p 9300:9300 \
 
  ## log4stash
 
-通过nuget安装logstash
+step1 通过nuget安装logstash
 
-修改log4net.conf配置文件
+step2 修改 log4net.conf 配置文件.
+
 ```xml
   <appender name="ElasticSearchAppender" type="log4stash.ElasticSearchAppender, log4stash">
     <Servers>
