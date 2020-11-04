@@ -27,3 +27,5 @@ configure arguments: --prefix=/usr/local/nginx --with-http_stub_status_module --
 ```shell
 ./nginx -s reload
 ```
+
+wget http://nginx.org/download/nginx-1.17.10.tar.gz
