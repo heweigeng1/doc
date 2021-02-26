@@ -4,7 +4,7 @@
 ```
     server {
     listen       80;
-    server_name  cabbageadmin.shundaonetwork.com;
+    server_name  www.xxxx.com;
     location / {
             root /project/demob/NewRetailWeb/build/;
             index index.html;
@@ -17,7 +17,7 @@
 ```
     server {
     listen       80;
-    server_name  cabbageadmin.shundaonetwork.com;
+    server_name  www.xxxx.com;
     location / {
             proxy_pass http://localhost:3001;
             proxy_http_version 1.1;
@@ -34,7 +34,7 @@
 ```
     server {
         listen       443 ssl;
-        server_name  cabbage.shundaonetwork.com;
+        server_name  www.xxxx.com;
         ssl_certificate crs/cabbage/3892525_cabbage.pem;
         ssl_certificate_key crs/cabbage/3892525_cabbage.key;
         ssl_session_cache    shared:SSL:1m;

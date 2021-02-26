@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <title>{{name}}</title>
+</head>
+{{~ func sub(x) ~}}
+{{~ if x.is_directory ~}}
+<el-submenu index="{{x.index}}">
+    <template slot="title">
+        <span>{{x.name}}</span>
+    </template>
+    {{~ else ~}}
+    <el-menu-item index="1-1" @click="onclick('{{x.path|html.url_escape}}')" data-pkey="{{x.name}}">{{x.name}}</el-menu-item>
+    {{~ end ~}}
+    {{~ for item in x.child ~}}
+    {{~ sub item ~}}
+    {{~ end ~}}
+    {{~ if x.is_directory ~}}
+</el-submenu>
+{{~ end;end ~}}
+
+<body>
+    <div id="app">
+        <el-container>
+            <el-header style="border-bottom: solid 1px #e6e6e6;height: 60px;">前端系列代码</el-header>
+            <el-container>
+                <el-aside style="width: 20%;top: 60px;bottom: 0px;">
+                    <el-row class="tac">
+                        <el-col>
+                            <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen"
+                                @close="handleClose">
+                                {{~ for item in list ~}}
+                                {{~ sub item ~}}
+                                {{~ end ~}}
+                            </el-menu>
+                        </el-col>
+                    </el-row>
+                </el-aside>
+                <el-main style="width: 80%;position: absolute;top: 60px;bottom: 0px;left: 20%;"><iframe id='mybody'
+                        width="100%" height="99%" v-bind:src="url"
+                        frameborder="0"></iframe></el-main>
+            </el-container>
+        </el-container>
+    </div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data:{url:'1_第一个页面.html'},
+        methods: {
+            handleOpen(key, keyPath) {
+                console.log(key, keyPath);
+            },
+            handleClose(key, keyPath) {
+                console.log(key, keyPath);
+            },
+            onclick(url){
+                this.url=url
+                console.log(url);
+            }
+        }
+    })
+</script>
+
+</html>
