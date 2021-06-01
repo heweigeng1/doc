@@ -31,6 +31,11 @@ docker build -t newimage .
 这里解释一下"."的意思是指将当前文件夹的Dockerfile,所以整段命令的意思是根据当前文件夹的Dockerfile生成一个新的镜像名为newimage
 
 
+```shell
+docker build -t newimage -f Dockerfilepath .
+```
+这个-f 就可以指定Dockerfile路径
+
 3. 最后运行这个镜像
 
 ```Shell
