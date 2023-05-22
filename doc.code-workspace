@@ -1,0 +1,52 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../gitea/公司"
+		},
+		{
+			"path": "../../gitea/showtime"
+		},
+		{
+			"path": "../高中/高中数学"
+		},
+		{
+			"path": "../../gitea/NewRetailWeb"
+		},
+		{
+			"path": "../../gitea/configfiles"
+		},
+		{
+			"path": "../../gitea/test-configfiles"
+		},
+		{
+			"path": "../../gitea-now/synctask-ui"
+		},
+		{
+			"path": "../前端课程"
+		},
+		{
+			"path": "C:/Users/何伟庚/Desktop/myhtml"
+		},
+		{
+			"path": "../../gitea-sanr/crs"
+		},
+		{
+			"path": "../../gitea-sanr/projectdoc"
+		},
+		{
+			"path": "../../gitea-now/ids4-antdpro"
+		},
+		{
+			"path": "../../gitea-now/lolo-adminui/lolo-admin"
+		},
+		{
+			"path": "E:/Games/World of Warcraft/_classic_/Interface/AddOns/aav"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "前端课程"
+	}
+}
