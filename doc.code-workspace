@@ -22,13 +22,7 @@
 			"path": "../../gitea/test-configfiles"
 		},
 		{
-			"path": "../../gitea-now/synctask-ui"
-		},
-		{
 			"path": "../前端课程"
-		},
-		{
-			"path": "C:/Users/何伟庚/Desktop/myhtml"
 		},
 		{
 			"path": "../../gitea-sanr/crs"
@@ -43,7 +37,16 @@
 			"path": "../../gitea-now/lolo-adminui/lolo-admin"
 		},
 		{
-			"path": "E:/Games/World of Warcraft/_classic_/Interface/AddOns/aav"
+			"path": "../Lolo.Shops.Web"
+		},
+		{
+			"path": "../../yngit"
+		},
+		{
+			"path": "../../yncrsgit"
+		},
+		{
+			"path": "../../dronedemo"
 		}
 	],
 	"settings": {
