@@ -50,6 +50,9 @@
 		},
 		{
 			"path": "../../shopsDoc"
+		},
+		{
+			"path": "../../dyg-config"
 		}
 	],
 	"settings": {
